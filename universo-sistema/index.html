@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Plantilla Universo · Quark Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="bar"></div>
+    <section id="login">
+      <div class="lc">
+        <div class="lg"><i id="li"></i><span id="ln"></span></div>
+        <h2>Iniciar sesión</h2>
+        <p>
+          Esta es una demo. Elige un rol para ver cómo cambian los permisos.
+        </p>
+        <label>Usuario<select id="lu"></select></label
+        ><label
+          >Contraseña<input
+            type="password"
+            value="demo1234"
+            aria-label="Contraseña" /></label
+        ><button class="btn" id="enter">Entrar al sistema</button>
+      </div>
+    </section>
+    <div id="app">
+      <aside id="nav">
+        <div class="lg"><i id="ai"></i><span id="an"></span></div>
+      </aside>
+      <main>
+        <div class="top">
+          <h1 id="vt"></h1>
+          <div class="who">
+            <span id="wn"></span><span class="role" id="wr"></span
+            ><button class="btn g sm" id="out">Salir</button>
+          </div>
+        </div>
+        <div class="v" id="v-resumen">
+          <div class="kpis" id="kp"></div>
+          <div class="two">
+            <div class="pn">
+              <h3>Ventas de los últimos 7 días</h3>
+              <div id="ch"></div>
+            </div>
+            <div class="pn">
+              <h3>Más vendidos</h3>
+              <div id="top"></div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-ventas">
+          <div class="two">
+            <div class="pn">
+              <h3>Registrar venta</h3>
+              <form class="sale" id="sf" onsubmit="return false;">
+                <label>Producto<select id="sp"></select></label
+                ><label
+                  >Cantidad<input
+                    id="sq"
+                    type="number"
+                    min="1"
+                    value="1" /></label
+                ><label
+                  >Método de pago<select id="sm">
+                    <option>Efectivo</option>
+                    <option>Transferencia</option>
+                    <option>Tarjeta</option>
+                  </select></label
+                ><button class="btn" id="sb">Registrar venta</button>
+              </form>
+            </div>
+            <div class="pn">
+              <h3>Últimas ventas</h3>
+              <div id="sl"></div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-inventario">
+          <div class="pn">
+            <h3>Inventario</h3>
+            <label style="margin-bottom: 12px"
+              >Buscar<input id="iq" placeholder="Nombre o código"
+            /></label>
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Estado</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="it"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-reportes">
+          <div class="two">
+            <div class="pn">
+              <h3>Ventas por método de pago</h3>
+              <div id="dn"></div>
+            </div>
+            <div class="pn">
+              <h3>Resumen</h3>
+              <div id="rs"></div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-usuarios">
+          <div class="pn">
+            <h3>Usuarios y roles</h3>
+            <div id="us"></div>
+            <p style="color: var(--mute); font-size: 0.85rem; margin-top: 12px">
+              Cada usuario ve y hace solo lo que su rol permite.
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="toast" role="status"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
